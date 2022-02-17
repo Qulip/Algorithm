@@ -1,5 +1,5 @@
 package beakjoon.d220211.q2564;
-//https://www.acmicpc.net/problem/2468
+//https://www.acmicpc.net/problem/2564
 //Solved : 22/02/11
 
 import java.util.*;
