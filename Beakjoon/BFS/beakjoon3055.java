@@ -33,8 +33,8 @@ class Main{
         }
 
         int rst = BFS();
-        if(rst!=-1) bw.write(Integer.toString(rst));
-        else bw.write("KAKTUS");
+        if(rst!=-1) bw.write(Integer.toString(rst));    //결과 있으면 출력
+        else bw.write("KAKTUS");                        //결과 없으면 스트링 출력
         bw.close();
         br.close();
     }
@@ -48,7 +48,6 @@ class Main{
         while(!q.isEmpty()){
             int[] n = q.poll();
             cnt--;
-            //System.out.println(Arrays.toString(n));
             if(map[n[0]][n[1]]=='*') continue;
             for(int i=0; i<4; i++) {
                 int nr = n[0] + dr[i];
@@ -64,12 +63,11 @@ class Main{
             if(cnt == 0){
                 Flow();
                 cnt = q.size();
-                //System.out.println(cnt);
             }
         }
         return -1;
     }
-    static void Flow(){
+    static void Flow(){         //물 퍼지는 함수
         int cnt = water.size();
         while(cnt>0){
             int[] n = water.poll();
@@ -86,6 +84,5 @@ class Main{
                 }
             }
         }
-        //for(char[] i : map) System.out.println(Arrays.toString(i));
     }
 }
