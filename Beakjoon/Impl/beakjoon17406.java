@@ -40,7 +40,6 @@ class Main{
     }
     static void dfs(int idx){
         if(idx == K){
-            //for(int[] i:arr) System.out.println(Arrays.toString(i));
             int score = Integer.MAX_VALUE;
             for(int i=0; i<N; i++){
                 int now = 0;
